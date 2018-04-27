@@ -8,6 +8,11 @@ class MelanomaTest : public ::testing::Test {
   virtual void SetUp() {
     bdMelanoma mel;
     vbdMelanoma vmel;
+    bdImage input, outputExpected;
+	  
+    vmel.LoadGrayScaleImageFromPNGFile("../ressource/test.png", input);
+    vmel.LoadGrayScaleImageFromPNGFile("../ressource/test_expected.png", outputExpected);
+
   }
 
   virtual void TearDown() {
@@ -17,10 +22,8 @@ class MelanomaTest : public ::testing::Test {
 };
 
 TEST_F(MelanomaTest,Downsample){
-	bdImage input, output, outputExpected;
+	bdImage output;
 
-	vmel.LoadGrayScaleImageFromPNGFile("../ressource/test.png", input);
-	vmel.LoadGrayScaleImageFromPNGFile("../ressource/test_expected.png", outputExpected);
 
 	mel.DownSample(input, output, 4);
 
@@ -28,6 +31,11 @@ TEST_F(MelanomaTest,Downsample){
 }
 
 TEST_F(MelanomaTest, HistogramArray) {
+	bdArray<int> output_histogram, output_histogram_expected;
+	int range_max = 255;
+	output_histogram_expected.Set(range_max+1);
+	
+	
   ASSERT_TRUE(true);
 }
 
