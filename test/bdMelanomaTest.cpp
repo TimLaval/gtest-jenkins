@@ -21,6 +21,7 @@ class MelanomaTest : public ::testing::Test {
   }
 };
 
+//Test Downsampling methods
 TEST_F(MelanomaTest,Downsample){
 	bdImage output;
 
@@ -35,8 +36,8 @@ TEST_F(MelanomaTest, HistogramArray) {
 	int range_max = 255;
 	output_histogram_expected.Set(range_max+1);
 	
-	
   ASSERT_TRUE(true);
+  ASSERT_EQUALS(output_histogram, output_histogram_expected);
 }
 
 TEST_F(MelanomaTest, HistogramCurveXY) {
