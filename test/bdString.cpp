@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../dermscan-ipi/DermScan_CMAKE/Source/bdString.h"
+#include "../main/Source/bdString.h"
 
 
 class StringTest : public ::testing::Test {

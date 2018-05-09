@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../dermscan-ipi/DermScan_CMAKE/Source/bdImage.h"
+#include "../main/Source/bdImage.h"
 
 
 class ImageTest : public ::testing::Test {

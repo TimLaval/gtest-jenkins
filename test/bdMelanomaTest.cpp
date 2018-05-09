@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include "../../dermscan-ipi/DermScan_CMAKE/Source/bdMelanoma.h"
-#include "../../dermscan-ipi/DermScan_CMAKE/Source/vbdMelanoma.h"
+#include "../main/Source/bdMelanoma.h"
+#include "../main/Source/vbdMelanoma.h"
 
 //Test file for methods of bdMelanoma.h
 class MelanomaTest : public ::testing::Test {

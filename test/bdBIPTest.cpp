@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../../dermscan-ipi/DermScan_CMAKE/Source/bdBIP.h"
+#include "../main/Source/bdBIP.h"
 
 
 class BIPTest : public ::testing::Test {
