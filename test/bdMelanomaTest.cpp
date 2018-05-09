@@ -9,14 +9,18 @@ class MelanomaTest : public ::testing::Test {
     bdMelanoma mel;
     vbdMelanoma vmel;
     bdImage input, output, outputExpected;
+	  bdArray<int> output_histogram, output_histogram_expected;
+    
   }
 
   virtual void TearDown() {
     // Code here will be called immediately after each test
     // (right before the destructor).
-    input = NULL;
-    output = NULL;
-    outputExpected = NULL;
+    input.Reset();
+    output.Reset();
+    outputExpected.Reset();
+    output_histogram.Reset();
+    output_histogram_expected.Reset();
   }
 };
 
@@ -54,7 +58,6 @@ TEST_F(MelanomaTest, DownsampleMean) {
 //////////////////////////////////////////////////////////
 
 TEST_F(MelanomaTest, HistogramArray) {
-	bdArray<int> output_histogram, output_histogram_expected;
 	int range_max = 255;
 	output_histogram_expected.Set(range_max+1);
 	
