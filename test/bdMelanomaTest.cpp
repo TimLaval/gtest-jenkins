@@ -87,15 +87,27 @@ TEST_F(MelanomaTest, HistogramMaxima){
 //////////////////////////////////////////////////////////
 
 TEST_F(MelanomaTest, ExtractRedImage) {
-  ASSERT_TRUE(true);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/test_for_extraction.png", input);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/red_extraction_output.png", outputExpected);
+  
+  ASSERT_EQUALS(1, mel.Extract_RedImage(input, output));
+  ASSERT_EQUALS(outputExpected, output);
 }
 
 TEST_F(MelanomaTest, ExtractGreenImage) {
-  ASSERT_TRUE(true);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/test_for_extraction.png", input);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/green_extraction_output.png", outputExpected);
+  
+  ASSERT_EQUALS(1, mel.Extract_GreenImage(input, output));
+  ASSERT_EQUALS(outputExpected, output);
 }
 
 TEST_F(MelanomaTest, ExtractBlueImage) {
-  ASSERT_TRUE(true);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/test_for_extraction.png", input);
+  vmel.LoadGrayScaleImageFromPNGFile("../ressource/blue_extraction_output.png", outputExpected);
+  
+  ASSERT_EQUALS(1, mel.Extract_BlueImage(input, output));
+  ASSERT_EQUALS(outputExpected, output);
 }
 
 TEST_F(MelanomaTest, ExtractMaxOfRGBImage) {
