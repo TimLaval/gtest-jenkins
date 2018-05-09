@@ -28,6 +28,7 @@ class MelanomaTest : public ::testing::Test {
 //////////////////////////////////////////////////////////
 ///////// TEST ALL DOWNSAMPLING METHODS
 //////////////////////////////////////////////////////////
+
 TEST_F(MelanomaTest,Downsample) {
   
   vmel.LoadGrayScaleImageFromPNGFile("../ressource/test.png", input);
