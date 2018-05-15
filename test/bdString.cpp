@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../main/Source/bdString.h"
+#include "../../dermscan/Source/bdString.h"
 
 
 class StringTest : public ::testing::Test {

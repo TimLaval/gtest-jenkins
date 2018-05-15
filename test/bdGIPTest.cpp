@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../.main/Source/bdGIP.h"
+#include "../../dermscan/Source/bdGIP.h"
 
 
 class GIPTest : public ::testing::Test {
